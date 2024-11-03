@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "font-400";
+  src: url("../assets/fonts/static/DMSans-Regular.ttf");
+}
+@font-face {
+  font-family: "font-500";
+  src: url("../assets/fonts/static/DMSans-Medium.ttf");
+}
+@font-face {
+  font-family: "font-i";
+  src: url("../assets/fonts/static/DMSans-MediumItalic.ttf");
+}
+:root {
+  --Purple-100: #dacffc;
+  --Purple-500: #7650dc;
+  --Yellow-100: #f9eee1;
+  --Yellow-500: #ffcb6b;
+  --White: #ffffff;
+  --Black: #121212;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "font-400";
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e4ddfa;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+}
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.font-500 {
+  font-family: "font-500";
+}
+.font-i {
+  font-family: "font-i";
+}
+main {
+  width: 900px;
+  height: 550px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  > section {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    &.section-1 {
+      grid-area: 1 / 4 / 5 / 10;
+      background-color: var(--Purple-500);
+      padding: 20px 15px;
+      p {
+        text-align: center;
+        &:first-child {
+          font-size: 50px;
+          line-height: 45px;
+          color: var(--White);
+          span:first-of-type {
+            color: var(--Yellow-500);
+          }
+        }
+        &:last-child {
+          color: var(--Purple-100);
+        }
+      }
+      img {
+        width: 150px;
+        margin-top: 10px;
+      }
+    }
+    &.section-2 {
+      grid-area: 5 / 4 / 8 / 7;
+      padding: 10px;
+      background-color: var(--White);
+      img {
+        position: relative;
+        top: 5px;
+        left: 15px;
+        width: 100%;
+        margin-bottom: 6px;
+      }
+      p {
+        line-height: 20px;
+        font-size: 22px;
+        span {
+          display: block;
+        }
+      }
+    }
+    &.section-3 {
+      grid-area: 5 / 7 / 8 / 10;
+      padding: 10px;
+      background-color: var(--Yellow-500);
+      position: relative;
+      img {
+        width: 90%;
+        position: absolute;
+        bottom: 0;
+        transform: translateY(65%);
+      }
+      p {
+        font-size: 25px;
+        line-height: 22px;
+      }
+    }
+    &.section-4 {
+      grid-area: 1 / 10 / 8 / 13;
+      background-color: var(--Purple-100);
+      padding: 20px 0px 20px 25px;
+      img {
+        height: 200px;
+        margin-block: 10px;
+      }
+      p {
+        &:first-child {
+          font-size: 23px;
+          line-height: 22px;
+        }
+        &:last-child {
+          font-size: 18px;
+          line-height: 18px;
+        }
+      }
+    }
+    &.section-5 {
+      display: flex;
+      align-items: center;
+      grid-area: 8 / 7 / 11 / 13;
+      padding: 10px 20px;
+      background-color: var(--Purple-500);
+      img {
+        height: 100%;
+      }
+      p {
+        margin-left: 10px;
+        font-size: 28px;
+        line-height: 25px;
+        color: var(--White);
+      }
+    }
+    &.section-6 {
+      background-color: var(--White);
+      padding: 10px;
+      grid-area: 8 / 4 / 11 / 7;
+      p {
+        &:first-child {
+          font-size: 40px;
+        }
+        &:last-of-type {
+          margin-bottom: 15px;
+        }
+      }
+      img {
+        width: 70%;
+      }
+    }
+    &.section-7 {
+      background-color: var(--Yellow-100);
+      grid-area: 1 / 1 / 6 / 4;
+      padding-inline: 15px;
+      img {
+        width: 80%;
+      }
+      p {
+        font-size: 30px;
+        letter-spacing: 0px;
+        line-height: 24px;
+        margin-bottom: 25px;
+        span {
+          color: var(--Purple-500);
+        }
+      }
+    }
+    &.section-8 {
+      grid-area: 6 / 1 / 11 / 4;
+      padding: 15px;
+      background-color: var(--Yellow-500);
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 70%;
+        margin-top: auto;
+        margin-inline: auto;
+    }
+      p{
+        font-size: 30px;
+        line-height: 28px;
+        margin-bottom: 20px;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
